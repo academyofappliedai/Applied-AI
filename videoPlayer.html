@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Player</title>
+    <style>
+        
+        video {
+            border-radius: 20px;
+            width: 80%;
+            height: 60%;
+            object-fit: cover;
+            box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
+        }
+    </style>
+    <script>
+        function loadVideo() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const videoFile = urlParams.get('video');
+            if (videoFile) {
+                const videoElement = document.getElementById('videoPlayer');
+                videoElement.src = videoFile;
+                videoElement.play();
+            } else {
+                alert("No video specified!");
+            }
+        }
+    </script>
+</head>
+<body onload="loadVideo()">
+    <div  class="video-container">
+        <video id="videoPlayer" controls>
+            <!-- The video source will be set dynamically via JavaScript -->
+        </video>
+    </div>
+</body>
+</html>

@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Informative Webpage</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+       
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #000000;
+            padding: 10px 20px;
+            padding-left: 306px;
+            
+        }
+
+        .navbar a {
+            color: rgb(255, 255, 255);
+            text-decoration: none;
+            padding: 10px 15px;
+            font-size: 16px;
+        }
+
+        .navbar a:hover {
+            
+            justify-content:space-around;
+            align-items: center;
+            background-color: #575757;
+            padding: 20px 20px;
+        }
+
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+
+        .dropdown-content a {
+            color: black;
+            padding: 10px 15px;
+            text-decoration: none;
+            display: block;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #f1f1f1;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .logo {
+            height: 40px;
+        }
+
+        /* Information section */
+        .info-section {
+            margin-top: -20px;
+            background-color: #c6c6c6;
+            color: #333;
+            
+            
+            
+        }
+
+        .info-section h1 {
+            margin-top: 20px;
+            padding:20px 20px 20px 20px;
+            
+            
+        }
+        .gif {
+            display : flex;
+            margin-top: 1px;
+            
+            
+            background-color: #c6c6c6;
+            color: #333;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.19), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        }
+        .btn{
+            margin-top : 400px;
+            position: absolute; /* Position the button relative to the container */
+            top: 50%; /* Adjust as needed */
+            left: 50%; /* Adjust as needed */
+            transform: translate(-50%, -50%); /* Center the button */
+            z-index: 10; /* Ensure the button appears above the image */
+            background-color: #3177f9; /* Button color */
+            color: rgb(0, 0, 0); /* Text color */
+            border: none; /* Remove borders */
+            padding: 20px 50px; /* Adjust padding for button size */
+            font-size: 16px; /* Adjust font size */
+            border-radius: 5px; /* Rounded corners */
+            cursor: pointer; /* Pointer cursor on hover */
+            
+        }
+    
+        .btn:hover {
+            background-color: #000000; /* Change background color on hover */
+            transform: translate(-50%, -50%) scale(1.1); /* Slightly enlarge on hover */
+            color: #ffffff; /* Optional: Change text color */
+        }
+        
+       .di{
+         margin-left:1350px;
+       }
+       
+       
+        /* Footer styles */
+        .footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+
+        .footer p {
+            margin: 5px 0;
+        }
+    </style>
+</head>
+<body>
+    
+
+    <!-- Navbar -->
+
+    <div class="navbar">
+        <div class="di">
+            <a href="Registration.html" >Sign Up</a>
+            <a href="login.html" >Login</a>
+        </div>
+        <img src="images.png" alt="Logo" class="logo">
+    </div>
+    
+
+    <!-- Information Section -->
+   
+    <div class="gif">
+        <a href="home.html">
+        <button type="button" class="btn">Get Started</button>
+        </a>
+        <img src="landingpage.gif" style= "height:1080px; width:1920px"></img>
+    </div>
+    
+    
+    
+    
+    
+
+    <!-- Footer -->
+    <div class="footer">
+        <p>Contact us at: info@website.com | Phone: (123) 456-7890</p>
+        <p>Address: 123 Main Street, City, Country</p>
+        <p>&copy; 2024 Your Website. All rights reserved.</p>
+    </div>
+
+</body>
+</html>

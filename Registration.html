@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration - Academy of Applied AI</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Navbar styles (retained from the main page) */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #000000;
+            padding: 10px 20px;
+        }
+
+        .navbar a {
+            color: rgb(255, 255, 255);
+            text-decoration: none;
+            padding: 10px 15px;
+            font-size: 16px;
+        }
+
+        .navbar a:hover {
+            background-color: #575757;
+            padding: 20px 20px;
+        }
+
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+
+        .dropdown-content a {
+            color: black;
+            padding: 10px 15px;
+            text-decoration: none;
+            display: block;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #f1f1f1;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .logo {
+            height: 40px;
+        }
+
+        /* Registration Form styles */
+        .registration-container {
+            max-width: 500px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #f9f9f9;
+            border-radius: 10px;
+            box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        .registration-container h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .registration-container label {
+            font-weight: bold;
+            display: block;
+            margin-top: 10px;
+        }
+
+        .registration-container input,
+        .registration-container select {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .registration-container input[type="submit"] {
+            background-color: #3177f9;
+            color: white;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            padding: 10px 20px;
+        }
+
+        .registration-container input[type="submit"]:hover {
+            background-color: #575757;
+        }
+
+        .registration-container .login-link {
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        .registration-container .login-link a {
+            color: #3177f9;
+            text-decoration: none;
+        }
+
+        .registration-container .login-link a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <div class="navbar">
+        <div class="nav-links">
+            <a href="home.html">Home</a>
+
+            <a href="#">Contact Us</a>
+            <a href="#">FAQs</a>
+           
+        </div>
+        <img src="images.png" alt="Logo" class="logo">
+    </div>
+
+    <!-- Registration Form -->
+    <div class="registration-container">
+        <h2>Register</h2>
+        <form action="/submit_registration" method="POST">
+            <label for="name">Full Name</label>
+            <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+            <label for="phone">Phone Number</label>
+            <input type="text" id="phone" name="phone" placeholder="Enter your phone number" required>
+
+            <label for="gender">Gender</label>
+            <select id="gender" name="gender" required>
+                <option value="" disabled selected>Select your gender</option>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+                <option value="other">Other</option>
+            </select>
+
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" placeholder="Create a password" required>
+
+            <label for="confirm-password">Confirm Password</label>
+            <input type="password" id="confirm-password" name="confirm-password" placeholder="Confirm your password" required>
+
+            <input type="submit" value="Register">
+        </form>
+        <div class="login-link">
+            Already have an account? <a href="login.html">Login here</a>.
+        </div>
+    </div>
+</body>
+</html>
